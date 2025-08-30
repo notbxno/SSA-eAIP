@@ -4,7 +4,7 @@
 
 More information available at [Wikipedia](https://en.wikipedia.org/wiki/Quatro_de_Fevereiro_Airport).
 
-??? warning ""
+!!! warning ""
 
     The information contained in this platform is for flight simulation purposes only and shall not be used, under any circumstances, for real world aviation.
 
@@ -73,7 +73,7 @@ More information available at [Wikipedia](https://en.wikipedia.org/wiki/Quatro_d
 
 {%
     include-markdown "common/cruise-levels.md"
-    heading-offset=1
+    heading-offset=2
 %}
 
 ### Departure Procedures & Initial Climbs
@@ -130,7 +130,11 @@ More information available at [Wikipedia](https://en.wikipedia.org/wiki/Quatro_d
 
 #### Phraseology
 
-{{page>phraseology:icao#Taxi to HP}}
+{%
+    include-markdown "../phraseology/icao.md"
+    start="#### Taxi to HP"
+    end="#### Taxi to Stand"
+%}
 
 ### Taxi In Procedures
 
@@ -140,7 +144,11 @@ More information available at [Wikipedia](https://en.wikipedia.org/wiki/Quatro_d
 
 #### Phraseology
 
-{{page>phraseology:icao#Taxi to Stand}}
+{%
+    include-markdown "../phraseology/icao.md"
+    start="#### Taxi to Stand"
+    end="## Tower Operations"
+%}
 
 ## Tower
 
@@ -284,7 +292,7 @@ So, the most we can do at this point is to offer you a link to Google's [Search 
 
 ## Pilot Briefing
 
-??? note ""
+!!! note ""
 Pilots taking part in events that depart from or arrive to FNLU should make themselves familiar with this briefing page as well as with all existing charts.
 
 === "Overview"
