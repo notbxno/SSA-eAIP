@@ -5,7 +5,8 @@
 More information available at [Wikipedia](https://en.wikipedia.org/wiki/Quatro_de_Fevereiro_Airport).
 
 ??? warning ""
-The information contained in this platform is for flight simulation purposes only and shall not be used, under any circumstances, for real world aviation.
+
+    The information contained in this platform is for flight simulation purposes only and shall not be used, under any circumstances, for real world aviation.
 
 ## Aerodrome Information
 
@@ -70,9 +71,9 @@ The information contained in this platform is for flight simulation purposes onl
 
 - VFR flights are not allowed over and above the FL 150.
 
-{!
-include-markdown "../common/cruise-levels.md"
-!}
+{%
+    include-markdown "../common/cruise-levels.md"
+%}
 
 ### Departure Procedures & Initial Climbs
 
@@ -85,21 +86,21 @@ include-markdown "../common/cruise-levels.md"
 | 23  | 233º    | FL120         | -       |
 | 25  | 254º    | FL040         | -       |
 
-{!
-include-markdown "../phraseology/icao.md"
-start="#### Delivery Clearance"
-end="### Pushback Procedures"
-!}
+{%
+    include-markdown "../phraseology/icao.md"
+    start="#### Delivery Clearance"
+    end="### Pushback Procedures"
+%}
 
 ## Ground
 
 ### Push-back Procedures
 
-{!
-include-markdown "../phraseology/icao.md"
-start="#### Pushback Approved"
-end="### Taxi Procedures"
-!}
+{%
+    include-markdown "../phraseology/icao.md"
+    start="#### Pushback Approved"
+    end="### Taxi Procedures"
+%}
 
 #### Directions
 
@@ -155,23 +156,23 @@ end="### Taxi Procedures"
 
 ### Wake Separation
 
-=== Arrivals (nm)
+=== "Arrivals"
 
-| Lead | J   | H   | M   | L   |
-| ---- | --- | --- | --- | --- |
-| J    |     |     |     |     |
-| H    | 6   | 4   |     |     |
-| M    | 7   | 5   | 5   |     |
-| L    | 8   | 6   | 5   | 5   |
+    | Lead (nm) | J   | H   | M   | L   |
+    | ---- | --- | --- | --- | --- |
+    | J | | | | |
+    | H | 6 | 4 | | |
+    | M | 7 | 5 | 5 | |
+    | L | 8 | 6 | 5 | 5 |
 
-=== Departures (min)
+=== "Departures"
 
-| Lead | J   | H   | M   | L   |
-| ---- | --- | --- | --- | --- |
-| J    |     |     |     |     |
-| H    | 2   |     |     |     |
-| M    | 3   | 2   |     |     |
-| L    | 3   | 2   | 2   |     |
+    | Lead (min) | J   | H   | M   | L   |
+    | ---- | --- | --- | --- | --- |
+    | J    |     |     |     |     |
+    | H    | 2   |     |     |     |
+    | M    | 3   | 2   |     |     |
+    | L    | 3   | 2   | 2   |     |
 
 #### Phraseology
 
@@ -285,44 +286,44 @@ So, the most we can do at this point is to offer you a link to Google's [Search 
 ??? note ""
 Pilots taking part in events that depart from or arrive to FNLU should make themselves familiar with this briefing page as well as with all existing charts.
 
-=== ### Overview
+=== "Overview"
 
-Quatro de Fevereiro International Airport (4th February) is the main international airport of Angola. It is located in the southern part of the capital Luanda, situated in the Luanda Province, serving as the main gateway in and out of Luanda.
+    Quatro de Fevereiro International Airport (4th February) is the main international airport of Angola. It is located in the southern part of the capital Luanda, situated in the Luanda Province, serving as the main gateway in and out of Luanda.
 
-=== ### Departure
+=== "Departure"
 
-#### Clearance Delivery
+    #### Clearance Delivery
 
-- Clearances will be issued by Luanda Ground (FNLU_GND) or Luanda Tower (FNLU_TWR).
-- All aircraft will expect to depart on a Runway Heading, with an initial climb to 3000ft.
-- Runway 23 will be the preferred departure runway at Luanda up to 10 knots of tailwind.
-- Aircraft participating in any event should call 15 minutes before their planned CTOT to ensure a smooth departure. Failure to comply may result in resequencing.
-- Pilots should ONLY call once the pushback tug is connected.
+    - Clearances will be issued by Luanda Ground (FNLU_GND) or Luanda Tower (FNLU_TWR).
+    - All aircraft will expect to depart on a Runway Heading, with an initial climb to 3000ft.
+    - Runway 23 will be the preferred departure runway at Luanda up to 10 knots of tailwind.
+    - Aircraft participating in any event should call 15 minutes before their planned CTOT to ensure a smooth departure. Failure to comply may result in resequencing.
+    - Pilots should ONLY call once the pushback tug is connected.
 
-#### Ground Procedures
+    #### Ground Procedures
 
-- Runway 25 will be under the control of Ground if online, and aircraft will be cleared to cross.
+    - Runway 25 will be under the control of Ground if online, and aircraft will be cleared to cross.
 
-#### Departure Procedures
+    #### Departure Procedures
 
-- Comply with your assigned departure procedure and do not climb above your Initial Climb altitude unless instructed so.
-- You may be given intermediate climb instructions due to traffic. Do not climb above any assigned flight level.
-- Comply with any speed restrictions if provided. They are important to maintain adequate separation between traffic.
+    - Comply with your assigned departure procedure and do not climb above your Initial Climb altitude unless instructed so.
+    - You may be given intermediate climb instructions due to traffic. Do not climb above any assigned flight level.
+    - Comply with any speed restrictions if provided. They are important to maintain adequate separation between traffic.
 
-=== ### Arrival
+=== "Arrival"
 
-#### Arrivals and Approaches
+    #### Arrivals and Approaches
 
-- All flights into FNLU will have "VNA" as their final waypoint. This is normal. You will then be radar vectored off for the ILS Approach into Runway 23.
-- Please note Runway 23 is the only runway to have any instrument approaches. Should any other runway be used, only a visual approach can be executed.
-- During landing, pilots should aim to vacate via E, aircraft permitting. If not, pilots should utilise one of two backtrack pads on the runway. This should be a speedy operation to ensure that no extra delay occurs for departures or other inbounds.
+    - All flights into FNLU will have "VNA" as their final waypoint. This is normal. You will then be radar vectored off for the ILS Approach into Runway 23.
+    - Please note Runway 23 is the only runway to have any instrument approaches. Should any other runway be used, only a visual approach can be executed.
+    - During landing, pilots should aim to vacate via E, aircraft permitting. If not, pilots should utilise one of two backtrack pads on the runway. This should be a speedy operation to ensure that no extra delay occurs for departures or other inbounds.
 
-#### Oceanic Operations
+    #### Oceanic Operations
 
-- For Luanda Oceanic flights, you will not be required to request an Oceanic Clearance.
-- You will be requested however to maintain your Flight Level and an assigned Mach Number.
-- During Oceanic En-route, you'll be able to request higher flight levels, depending on availability.
-- Position Reports will not be required. You may be requested from Oceanic Controllers to provide your ETO (Expected Time Overhead) for a specific waypoint. What the Controller is expecting is your time (as in, 1615z) at the specific waypoint.
-- Remain on your last ATC assigned squawk code until instructed otherwise.
-- SELCAL is also available at Luanda Oceanic.
-- SLOP (Strategic Lateral Offset Procedure) is also available at Luanda Oceanic.
+    - For Luanda Oceanic flights, you will not be required to request an Oceanic Clearance.
+    - You will be requested however to maintain your Flight Level and an assigned Mach Number.
+    - During Oceanic En-route, you'll be able to request higher flight levels, depending on availability.
+    - Position Reports will not be required. You may be requested from Oceanic Controllers to provide your ETO (Expected Time Overhead) for a specific waypoint. What the Controller is expecting is your time (as in, 1615z) at the specific waypoint.
+    - Remain on your last ATC assigned squawk code until instructed otherwise.
+    - SELCAL is also available at Luanda Oceanic.
+    - SLOP (Strategic Lateral Offset Procedure) is also available at Luanda Oceanic.
