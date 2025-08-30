@@ -1,0 +1,159 @@
+name: Monthly Release Branch + Last-Month Release
+
+on:
+  # 00:05 UTC on the 1st of every month
+  schedule:
+    - cron: "5 0 1 * *"
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Override year (e.g., 2025). Leave blank to auto-detect UTC today."
+        required: false
+      month:
+        description: "Override month (1–12). Leave blank to auto-detect UTC today."
+        required: false
+      dry_run:
+        description: "true = print actions only"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write # needed to push branches/tags
+  pull-requests: write
+
+jobs:
+  rollover:
+    runs-on: ubuntu-latest
+    env:
+      BASE_BRANCH: main
+      DRY_RUN: ${{ inputs.dry_run || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Compute current & previous month (UTC)
+        id: m
+        shell: bash
+        run: |
+          Y="${{ inputs.year }}"
+          M="${{ inputs.month }}"
+
+          if [ -z "$Y" ] || [ -z "$M" ]; then
+            Y=$(date -u +%Y)
+            M=$(date -u +%m)  # zero-padded (01..12)
+          fi
+
+          # Normalize numeric values
+          if [[ "$M" =~ ^0[0-9]$ ]]; then M="${M#0}"; fi
+
+          # Validate
+          [[ "$Y" =~ ^[0-9]{4}$ ]] || { echo "Invalid year: $Y"; exit 1; }
+          [[ "$M" =~ ^([1-9]|1[0-2])$ ]] || { echo "Invalid month: $M"; exit 1; }
+
+          # Previous month (and possibly previous year)
+          if [ "$M" -eq 1 ]; then
+            PREV_Y=$((Y - 1)); PREV_M=12
+          else
+            PREV_Y=$Y; PREV_M=$((M - 1))
+          fi
+
+          # zero-pad for names/tags
+          M2=$(printf "%02d" "$M")
+          PREV_M2=$(printf "%02d" "$PREV_M")
+
+          CURR_BRANCH="release/${Y}m${M2}"          # ongoing branch to create
+          PREV_BRANCH="release/${PREV_Y}m${PREV_M2}"# last month's branch
+          PREV_TAG="v${PREV_Y}.M${PREV_M2}"         # release tag (capital M)
+
+          echo "curr_branch=${CURR_BRANCH}"   >> $GITHUB_OUTPUT
+          echo "prev_branch=${PREV_BRANCH}"   >> $GITHUB_OUTPUT
+          echo "prev_tag=${PREV_TAG}"         >> $GITHUB_OUTPUT
+
+          echo "Current : $CURR_BRANCH"
+          echo "Previous: $PREV_BRANCH (tag -> $PREV_TAG)"
+
+      - name: Ensure git identity
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Create the new monthly branch if missing
+        shell: bash
+        run: |
+          BR="${{ steps.m.outputs.curr_branch }}"
+
+          # Up-to-date base
+          git fetch origin "${BASE_BRANCH}:${BASE_BRANCH}"
+
+          # Remote existence check
+          if git ls-remote --exit-code --heads origin "refs/heads/${BR}" >/dev/null 2>&1; then
+            echo "Branch ${BR} already exists on origin. Nothing to do."
+            exit 0
+          fi
+
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "[dry-run] Would create ${BR} from origin/${BASE_BRANCH}"
+          else
+            git branch "${BR}" "origin/${BASE_BRANCH}"
+            git push origin "${BR}:${BR}"
+            echo "Created ${BR}"
+          fi
+
+      - name: Tag last month's tip (if branch exists & tag absent)
+        id: tagprev
+        shell: bash
+        run: |
+          PREV_BR="${{ steps.m.outputs.prev_branch }}"
+          PREV_TAG="${{ steps.m.outputs.prev_tag }}"
+
+          # Check branch exists remotely
+          if ! git ls-remote --exit-code --heads origin "refs/heads/${PREV_BR}" >/dev/null 2>&1; then
+            echo "Previous branch ${PREV_BR} not found on origin. Skipping tag."
+            echo "tagged=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Already tagged?
+          if git rev-parse -q --verify "refs/tags/${PREV_TAG}" >/dev/null; then
+            echo "Tag ${PREV_TAG} exists locally."
+          else
+            git fetch --tags origin || true
+          fi
+          if git ls-remote --exit-code --tags origin "refs/tags/${PREV_TAG}" >/dev/null 2>&1; then
+            echo "Tag ${PREV_TAG} already exists on origin. Skipping create."
+            echo "tagged=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Create tag from the remote branch tip
+          COMMIT=$(git ls-remote origin "refs/heads/${PREV_BR}" | awk '{print $1}')
+          if [ -z "$COMMIT" ]; then
+            echo "Could not resolve commit for ${PREV_BR}"; exit 1
+          fi
+
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "[dry-run] Would create annotated tag ${PREV_TAG} at ${COMMIT}"
+          else
+            git tag -a "${PREV_TAG}" -m "Monthly release ${PREV_TAG}" "${COMMIT}"
+            git push origin "refs/tags/${PREV_TAG}"
+            echo "Created tag ${PREV_TAG} at ${COMMIT}"
+          fi
+
+          echo "tagged=true" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release for last month (with notes)
+        if: steps.tagprev.outputs.tagged == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          PREV_TAG="${{ steps.m.outputs.prev_tag }}"
+          TITLE="Monthly Release ${PREV_TAG}"
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "[dry-run] Would create GitHub Release ${TITLE}"
+          else
+            gh release create "${PREV_TAG}" \
+              --title "${TITLE}" \
+              --generate-notes
+          fi
