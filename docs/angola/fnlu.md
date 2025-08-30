@@ -88,7 +88,7 @@ More information available at [Wikipedia](https://en.wikipedia.org/wiki/Quatro_d
 | 25  | 254º    | FL040         | -       |
 
 {%
-    include-markdown "../phraseology/icao.md"
+    include-markdown "phraseology/icao.md"
     start="#### Delivery Clearance"
     end="### Pushback Procedures"
 %}
