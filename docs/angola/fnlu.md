@@ -72,7 +72,7 @@ More information available at [Wikipedia](https://en.wikipedia.org/wiki/Quatro_d
 - VFR flights are not allowed over and above the FL 150.
 
 {%
-    include-markdown "../common/cruise-levels.md"
+    include-markdown "common/cruise-levels.md"
     heading-offset=1
 %}
 
