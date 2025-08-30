@@ -1,6 +1,6 @@
 # FNLU Luanda
 
-**Quatro de Fevereiro International Airport** is the main international airport of [Angola](overview.md). It is located in the southern part of the capital Luanda, situated in the Luanda Province. Quatro de Fevereiro means 4th of February, which is an important national holiday in Angola, marking the start of the armed struggle against the Portuguese colonial regime on 4 February 1961. In 2009, about 1.8 million passengers were counted.
+**Quatro de Fevereiro International Airport** is the main international airport of [Angola](index.md). It is located in the southern part of the capital Luanda, situated in the Luanda Province. Quatro de Fevereiro means 4th of February, which is an important national holiday in Angola, marking the start of the armed struggle against the Portuguese colonial regime on 4 February 1961. In 2009, about 1.8 million passengers were counted.
 
 More information available at [[https://en.wikipedia.org/wiki/Quatro_de_Fevereiro_Airport|Wikipedia]].
 
