@@ -2,24 +2,25 @@
 
 **Quatro de Fevereiro International Airport** is the main international airport of [Angola](index.md). It is located in the southern part of the capital Luanda, situated in the Luanda Province. Quatro de Fevereiro means 4th of February, which is an important national holiday in Angola, marking the start of the armed struggle against the Portuguese colonial regime on 4 February 1961. In 2009, about 1.8 million passengers were counted.
 
-More information available at [[https://en.wikipedia.org/wiki/Quatro_de_Fevereiro_Airport|Wikipedia]].
+More information available at [Wikipedia](https://en.wikipedia.org/wiki/Quatro_de_Fevereiro_Airport).
 
-??? warning
+??? warning ""
 The information contained in this platform is for flight simulation purposes only and shall not be used, under any circumstances, for real world aviation.
 
 ## Aerodrome Information
 
 ### Aerodrome Data
 
-| ICAO                | FNLU                                                                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- |
-| IATA                | LAD                                                                                                                                  |
-| Elevation           | 238 ft                                                                                                                               |
-| Transition Altitude | 3000 ft                                                                                                                              |
-| Transition Level    | FL45                                                                                                                                 |
-| Mag Variation       | 07º NW                                                                                                                               |
-| Coordinate          | [[https://geohack.toolforge.org/geohack.php?pagename=Quatro_de_Fevereiro_Airport&params=08_51_30_S_13_13_52_E_region:AO_type:airport | 08°51′30″S 13°13′52″E]] |
-| Site                | [[https://www.luandaairport.com/]]                                                                                                   |
+| Key                 | Value                                                                                                                                                       |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ICAO                | FNLU                                                                                                                                                        |
+| IATA                | LAD                                                                                                                                                         |
+| Elevation           | 238 ft                                                                                                                                                      |
+| Transition Altitude | 3000 ft                                                                                                                                                     |
+| Transition Level    | FL45                                                                                                                                                        |
+| Mag Variation       | 07º NW                                                                                                                                                      |
+| Coordinate          | [08°51′30″S 13°13′52″E](https://geohack.toolforge.org/geohack.php?pagename=Quatro_de_Fevereiro_Airport&params=08_51_30_S_13_13_52_E_region:AO_type:airport) |
+| Site                | [https://www.luandaairport.com/](https://www.luandaairport.com/)                                                                                            |
 
 ### Runways
 
@@ -84,8 +85,6 @@ include-markdown "../common/cruise-levels.md"
 | 23  | 233º    | FL120         | -       |
 | 25  | 254º    | FL040         | -       |
 
-#### Phraseology
-
 {!
 include-markdown "../phraseology/icao.md"
 start="#### Delivery Clearance"
@@ -95,8 +94,6 @@ end="### Pushback Procedures"
 ## Ground
 
 ### Push-back Procedures
-
-#### Phraseology
 
 {!
 include-markdown "../phraseology/icao.md"
@@ -129,7 +126,7 @@ end="### Taxi Procedures"
 
 - Be aware that some sceneries might not have all taxiways available. Please confirm with pilots. If not available, allow pilots to backtrack the runway from any available taxiway.
 
-#### Phraseology ==
+#### Phraseology
 
 {{page>phraseology:icao#Taxi to HP}}
 
@@ -139,7 +136,7 @@ end="### Taxi Procedures"
 
 - In high traffic situations, in order to maintain the high speed exits clear of traffic, Tower Controllers may issue an initial taxi instruction to arrival traffic before handover to Ground Controllers.
 
-#### Phraseology ==
+#### Phraseology
 
 {{page>phraseology:icao#Taxi to Stand}}
 
@@ -158,7 +155,7 @@ end="### Taxi Procedures"
 
 ### Wake Separation
 
-#### Arrivals (nm)
+=== Arrivals (nm)
 
 | Lead | J   | H   | M   | L   |
 | ---- | --- | --- | --- | --- |
@@ -167,7 +164,7 @@ end="### Taxi Procedures"
 | M    | 7   | 5   | 5   |     |
 | L    | 8   | 6   | 5   | 5   |
 
-#### Departures (min)
+=== Departures (min)
 
 | Lead | J   | H   | M   | L   |
 | ---- | --- | --- | --- | --- |
@@ -188,7 +185,7 @@ end="### Taxi Procedures"
 
 ### VFR Operations
 
-- Pilots must have the latest [[fnlu-charts|Visual Approach Chart]].
+- Pilots must have the latest Visual Approach Chart.
 
 #### VFR Circuits
 
@@ -268,30 +265,31 @@ end="### Taxi Procedures"
 
 Unfortunately, Angola does not provide publicly accessible navigational charts for its airspace or airports.
 
-So, the most we can do at this point is to offer you a link to Google's [[https://www.google.com/search?q=FNLU+Charts|Search Results]].
+So, the most we can do at this point is to offer you a link to Google's [Search Results](https://www.google.com/search?q=FNLU+Charts).
 
 ## Scenery
 
-| Platform | Type     | Developer            | Link                                                                                                                     | Remarks   |
-| -------- | -------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------ | --------- | --- |
-| XP11     | Freeware | MakeAfricaGreatAgain | [[https://forums.x-plane.org/index.php?/files/file/63400-fvrg-robert-gabriel-mugabe-international-airporthararezimbabwe/ | Scenery]] | -   |
-| P3D      | Payware  | FSCGAA               | [[https://secure.simmarket.com/fscgaa-zimbabwe-harare-intl-airport-fvrg-p3d4-5.phtml                                     | Scenery]] | -   |
-| P3D      | Payware  | FSXCENERY            | [[https://secure.simmarket.com/fsxcenery-fvha-aeropuerto-internacional-de-harare-fsx-p3d.phtml                           | Scenery]] | -   |
-| FSX      | Payware  | FSXCENERY            | [[https://secure.simmarket.com/fsxcenery-fvha-aeropuerto-internacional-de-harare-fsx-p3d.phtml                           | Scenery]] | -   |
-| FSX      | Freeware | David Uzzell         | [[https://library.avsim.net/esearch.php?DLID=178752                                                                      | Scenery]] | -   |
-| FSX      | Freeware | Lee Marrow           | [[https://flyawaysimulation.com/downloads/files/7767/fsx-scenery-fix-for-fvha-harare-airport/                            | Scenery]] | -   |
-| MSFS     | Freeware | EDDB2020             | [[https://flightsim.to/file/7335/harare-fvha-airport-lights-enhancement                                                  | Scenery]] | -   |
-| MSFS     | Freeware | DangerousBanana      | [[https://flightsim.to/file/40617/harare-international-scenery-improvements-fvha                                         | Scenery]] | -   |
+| Platform | Type     | Developer            | Link                                                                                                                              | Remarks |
+| -------- | -------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| XP11     | Freeware | MakeAfricaGreatAgain | [Scenery](https://forums.x-plane.org/index.php?/files/file/63400-fvrg-robert-gabriel-mugabe-international-airporthararezimbabwe/) | -       |
+| P3D      | Payware  | FSCGAA               | [Scenery](https://secure.simmarket.com/fscgaa-zimbabwe-harare-intl-airport-fvrg-p3d4-5.phtml)                                     | -       |
+| P3D      | Payware  | FSXCENERY            | [Scenery](https://secure.simmarket.com/fsxcenery-fvha-aeropuerto-internacional-de-harare-fsx-p3d.phtml)                           | -       |
+| FSX      | Payware  | FSXCENERY            | [Scenery](https://secure.simmarket.com/fsxcenery-fvha-aeropuerto-internacional-de-harare-fsx-p3d.phtml)                           | -       |
+| FSX      | Freeware | David Uzzell         | [Scenery](https://library.avsim.net/esearch.php?DLID=178752)                                                                      | -       |
+| FSX      | Freeware | Lee Marrow           | [Scenery](https://flyawaysimulation.com/downloads/files/7767/fsx-scenery-fix-for-fvha-harare-airport/)                            | -       |
+| MSFS     | Freeware | EDDB2020             | [Scenery](https://flightsim.to/file/7335/harare-fvha-airport-lights-enhancement)                                                  | -       |
+| MSFS     | Freeware | DangerousBanana      | [Scenery](https://flightsim.to/file/40617/harare-international-scenery-improvements-fvha)                                         | -       |
 
 ## Pilot Briefing
 
-//Pilots taking part in events that depart from or arrive to FNLU should make themselves familiar with this briefing page as well as with all existing charts.//
+??? note ""
+Pilots taking part in events that depart from or arrive to FNLU should make themselves familiar with this briefing page as well as with all existing charts.
 
-### Overview
+=== ### Overview
 
 Quatro de Fevereiro International Airport (4th February) is the main international airport of Angola. It is located in the southern part of the capital Luanda, situated in the Luanda Province, serving as the main gateway in and out of Luanda.
 
-### Departure Briefing
+=== ### Departure
 
 #### Clearance Delivery
 
@@ -311,7 +309,7 @@ Quatro de Fevereiro International Airport (4th February) is the main internation
 - You may be given intermediate climb instructions due to traffic. Do not climb above any assigned flight level.
 - Comply with any speed restrictions if provided. They are important to maintain adequate separation between traffic.
 
-### Arrival Briefing
+=== ### Arrival
 
 #### Arrivals and Approaches
 

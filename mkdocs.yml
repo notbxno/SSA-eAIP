@@ -12,6 +12,9 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true
   language: en
   palette:
     - scheme: default
