@@ -50,7 +50,6 @@ plugins:
       zoomable: true
       draggable: false
   - include-markdown:
-      encoding: ascii
       preserve_includer_indent: false
       dedent: false
       trailing_newlines: true
