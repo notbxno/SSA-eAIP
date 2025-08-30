@@ -73,6 +73,7 @@ More information available at [Wikipedia](https://en.wikipedia.org/wiki/Quatro_d
 
 {%
     include-markdown "../common/cruise-levels.md"
+    heading-offset=1
 %}
 
 ### Departure Procedures & Initial Climbs
