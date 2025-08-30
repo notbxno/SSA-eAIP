@@ -3,11 +3,10 @@ site_url: https://eaip2.vatssa.com
 theme:
   name: material
   features:
-    - navigation.tabs
-    - navigation.sections
-    - toc.integrate
+    - navigation.instant
+    - navigation.path
     - navigation.top
-    - navigation.tabs
+    - toc.follow
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -34,15 +33,9 @@ markdown_extensions:
 plugins:
   - search:
       lang: en
-  - awesome-nav:
-      strict: false
-      order: asc
-      sort_type: natural
-      order_by: title
   - git-revision-date-localized:
       type: date
       strict: false
-  - external-markdown: {}
   - glightbox:
       touchNavigation: true
       effect: zoom
@@ -50,7 +43,3 @@ plugins:
       height: auto
       zoomable: true
       draggable: false
-  - toc-sidebar:
-      position: right
-      collapsible: true
-      auto_scroll: true
